@@ -85,6 +85,6 @@ describe(`Folders endpoints`, () => {
             .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
             .expect(res.body)
         );
-    }).catch(done);
+    });
   });
 });

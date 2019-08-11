@@ -1440,3 +1440,15 @@
 {"message":"delete from \"folders\" where \"id\" = $1 - update or delete on table \"folders\" violates foreign key constraint \"notes_folder_fkey\" on table \"notes\"","level":"error"}
 {"message":"Unauthorized request to path: /api/folders/1","level":"error"}
 {"message":"knex(...).where(...).destroy is not a function","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /api/folders","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/folders","level":"error"}
+{"message":"Unauthorized request to path: /api/folders","level":"error"}
+{"message":"Unauthorized request to path: /api/folders","level":"error"}
+{"message":"Folder with id 161 was added to list","level":"info"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
