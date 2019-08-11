@@ -28,28 +28,28 @@ function makeNotesArray() {
       id: 2,
       notes_name: "Cats",
       modified_date: "2019-08-10T23:47:03.708Z",
-      content: "This is content for dog",
+      content: "This is content for cat",
       folder: 2
     },
     {
       id: 3,
       notes_name: "Frogs",
       modified_date: "2019-08-10T23:47:03.708Z",
-      content: "This is content for dog",
+      content: "This is content for frogs",
       folder: 3
     },
     {
       id: 4,
       notes_name: "Bear",
-      modified_date: "2019-08-10T23:47:03.708Z",
-      content: "This is content for dog",
+      modified_date: "2019-08-11T23:47:03.708Z",
+      content: "This is content for bear",
       folder: 1
     },
     {
       id: 5,
       notes_name: "Turtle",
       modified_date: "2019-08-10T23:47:03.708Z",
-      content: "This is content for dog",
+      content: "This is content for turtle",
       folder: 1
     }
   ];

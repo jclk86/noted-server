@@ -24,20 +24,16 @@ describe(`Folders endpoints`, () => {
   );
 
   describe(`Unauthorized requests`, () => {
-    const testFolders = fixtures.makeFoldersArray();
-    beforeEach("insert folders", () => {
-      return db.into("folders").insert(testFolders);
-    });
-
     it(`responds with 401 Unauthorized for GET /api/folders`, () => {
       return supertest(app)
         .get("/api/folders")
         .expect(401, { error: "Unauthorized request" });
     });
 
-    it(`responds with 401 Unauthorized for GET /api/notes`, () => {
+    it(`responds with 401 Unauthorized for POST /api/bookmarks`, () => {
       return supertest(app)
-        .get("/api/notes")
+        .post("/api/bookmarks")
+        .send({ folder_name: "Tortoise" })
         .expect(401, { error: "Unauthorized request" });
     });
   });
@@ -66,27 +62,29 @@ describe(`Folders endpoints`, () => {
     });
   });
 
-  describe(`GET /api/notes`, () => {
-    context(`Given no notes in the database`, () => {
-      it(`responds with 200 and an empty list`, () => {
-        return supertest(app)
-          .get("/api/notes")
-          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
-          .expect(200, []);
-      });
-    });
-
-    context(`GET /api/notes`, () => {
-      const testNotes = fixtures.makeNotesArray();
-      beforeEach("insert notes", () => {
-        return db.into("notes").insert(testNotes);
-      });
-      it(`it gets the notes from api`, () => {
-        return supertest(app)
-          .get("/api/notes")
-          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
-          .expect(200, testNotes);
-      });
-    });
+  describe(`POST /api/folders`, () => {
+    it("adds a new folder to the database", () => {
+      const newFolder = {
+        folder_name: "GREAT"
+      };
+      return supertest(app)
+        .post(`/api/folders`)
+        .send(newFolder)
+        .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+        .expect(201)
+        .expect(res => {
+          expect(res.body.folder_name).to.eql(newFolder.folder_name);
+          expect(res.body).to.have.property("id");
+          expect(res.headers.location).to.eql(
+            `http://localhost:8000/api/folders/${res.body.id}`
+          );
+        })
+        .then(res =>
+          supertest(app)
+            .get(`http://localhost:8000/api/folders/${res.body.id}`)
+            .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+            .expect(res.body)
+        );
+    }).catch(done);
   });
 });
