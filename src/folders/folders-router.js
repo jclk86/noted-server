@@ -37,7 +37,7 @@ foldersRouter
         logger.info(`Folder with id ${folder.id} was added to list`);
         res
           .status(201)
-          .location(`http://localhost:8000/api/folders/${folder.id}`)
+          .location(`/api/folders/${folder.id}`)
           .json(serializeFolder(folder));
       })
       .catch(next);
@@ -68,6 +68,29 @@ foldersRouter
     FoldersService.deleteFolder(req.app.get("db"), folder_id)
       .then(numRowsAffected => {
         logger.info(`Folder with id ${folder_id} deleted.`);
+        res.status(204).end();
+      })
+      .catch(next);
+  })
+  .patch(bodyParser, (req, res, next) => {
+    const { folder_name } = req.body;
+    const folderToUpdate = { folder_name };
+    const numberOfValues = Object.values(folderToUpdate).filter(Boolean).length;
+    if (numberOfValues === 0) {
+      logger.error(`Invalid update without required fields`);
+      return res.status(400).json({
+        error: {
+          message: `Request body must container folder_name`
+        }
+      });
+    }
+
+    FoldersService.updateFolder(
+      req.app.get("db"),
+      req.params.folder_id,
+      folderToUpdate
+    )
+      .then(numRowsAffected => {
         res.status(204).end();
       })
       .catch(next);

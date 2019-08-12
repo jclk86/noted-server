@@ -1,4 +1,4 @@
-INSERT INTO notes (notes_name, content, folder)
+INSERT INTO notes (note_name, content, folder)
 VALUES
   ('Dogs', 'This is content for dog', 3),
   ('Cats', 'This is content for dog', 2),

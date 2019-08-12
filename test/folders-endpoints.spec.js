@@ -75,16 +75,55 @@ describe(`Folders endpoints`, () => {
         .expect(res => {
           expect(res.body.folder_name).to.eql(newFolder.folder_name);
           expect(res.body).to.have.property("id");
-          expect(res.headers.location).to.eql(
-            `http://localhost:8000/api/folders/${res.body.id}`
-          );
+          expect(res.headers.location).to.eql(`/api/folders/${res.body.id}`);
         })
         .then(res =>
           supertest(app)
-            .get(`http://localhost:8000/api/folders/${res.body.id}`)
+            .get(`/api/folders/${res.body.id}`)
             .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
             .expect(res.body)
         );
+    });
+  });
+
+  // describe(`GET /api/folders/:folderId`, () => {
+
+  // })
+
+  describe(`DELETE /api/folders/:folderId`, () => {
+    context(`Given there are no folders`, () => {
+      it(`responds 404 when folder does not exist`, () => {
+        return supertest(app)
+          .delete(`/api/folders/123`)
+          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+          .expect(404, {
+            error: { message: `Folder not found` }
+          });
+      });
+    });
+
+    context(`Given there are folders`, () => {
+      const testFolders = fixtures.makeFoldersArray();
+      beforeEach("insert folders", () => {
+        return db.into("folders").insert(testFolders);
+      });
+
+      it("removes the the folder by UD from the database", () => {
+        const idToRemove = 1;
+        const expectedFolders = testFolders.filter(
+          folder => folder.id !== idToRemove
+        );
+        return supertest(app)
+          .delete(`/api/folders/${idToRemove}`)
+          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+          .expect(204)
+          .then(() => {
+            supertest(app)
+              .get(`/api/folders`)
+              .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+              .expect(expectedFolders);
+          });
+      });
     });
   });
 });
