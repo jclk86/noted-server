@@ -1,6 +1,7 @@
 const knex = require("knex");
 const app = require("../src/app");
 const fixtures = require("./notes-fixtures");
+const supertest = require("supertest");
 
 describe(`Folders endpoints`, () => {
   let db;
@@ -86,12 +87,51 @@ describe(`Folders endpoints`, () => {
     });
   });
 
-  // describe(`GET /api/folders/:folderId`, () => {
+  describe(`PATCH /api/folders/:folderId`, () => {
+    context(`Given there is no folder of that id`, () => {
+      it(`responds 404 when folder does not exist`, () => {
+        return supertest(app)
+          .patch(`/api/folders/123`)
+          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+          .expect(404, {
+            error: { message: `Folder not found` }
+          });
+      });
+    });
 
-  // })
+    context(`Given the folder id exists`, () => {
+      const testFolders = fixtures.makeFoldersArray();
+      beforeEach("insert folders", () => {
+        return db.into("folders").insert(testFolders);
+      });
+
+      it(`responds with 204 and updates the bookmark`, () => {
+        const idToUpdate = 2;
+        const updateFolder = {
+          folder_name: "updated folder name"
+        };
+        const expectedFolder = {
+          ...testFolders[idToUpdate - 1],
+          ...updateFolder
+        };
+
+        return supertest(app)
+          .patch(`/api/folders/${idToUpdate}`)
+          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+          .send(updateFolder)
+          .expect(204)
+          .then(res =>
+            supertest(app)
+              .get(`/api/folders/${idToUpdate}`)
+              .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+              .expect(expectedFolder)
+          );
+      });
+    });
+  });
 
   describe(`DELETE /api/folders/:folderId`, () => {
-    context(`Given there are no folders`, () => {
+    context(`Given there is no folder of that id`, () => {
       it(`responds 404 when folder does not exist`, () => {
         return supertest(app)
           .delete(`/api/folders/123`)

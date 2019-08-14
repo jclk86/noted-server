@@ -2,7 +2,7 @@ const knex = require("knex");
 const app = require("../src/app");
 const fixtures = require("./notes-fixtures");
 
-describe(`Folders endpoints`, () => {
+describe(`Notes endpoints`, () => {
   let db;
 
   before(`make knex instance`, () => {
@@ -93,6 +93,68 @@ describe(`Folders endpoints`, () => {
       //     .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
       //     .expect(res.body)
       // );
+    });
+  });
+
+  describe(`DELETE /api/notes/:noteId`, () => {
+    context(`Given there is no note of that id`, () => {
+      it(`responds 404 when folder does not exist`, () => {
+        return supertest(app)
+          .delete(`/api/notes/123`)
+          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+          .expect(404, {
+            error: { message: `Folder not found` }
+          });
+      });
+    });
+  });
+
+  describe(`PATCH /api/notes/:noteId`, () => {
+    context(`Given there is no note of that id`, () => {
+      it(`responds 404 when folder does not exist`, () => {
+        return supertest(app)
+          .patch(`/api/notes/123`)
+          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+          .expect(404, {
+            error: { message: `Note doesn't exist` }
+          });
+      });
+    });
+
+    context(`Given the note id exists`, () => {
+      const testFolders = fixtures.makeFoldersArray();
+      const testNotes = fixtures.makeNotesArray();
+      beforeEach("insert folders", () => {
+        return db.into("folders").insert(testFolders);
+      });
+      beforeEach("insert notes", () => {
+        return db.into("notes").insert(testNotes);
+      });
+
+      it(`responds with 204 and updates the note`, () => {
+        const idToUpdate = 2;
+        const updateNote = {
+          note_name: "updated note name",
+          content: "changed content via patch request",
+          folder: 3
+        };
+        const expectedNote = {
+          ...testNotes[idToUpdate - 1],
+          ...updateNote
+        };
+
+        return supertest(app)
+          .patch(`/api/notes/${idToUpdate}`)
+          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+          .send(updateNote)
+          .expect(204)
+          .then(res =>
+            supertest(app)
+              .get(`/api/notes/${idToUpdate}`)
+              .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+              .expect(expectedNote)
+          );
+      });
     });
   });
 });
