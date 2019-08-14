@@ -39,7 +39,7 @@ notesRouter
     NotesService.insertNote(req.app.get("db"), newNote)
       .then(note => {
         logger.info(`Note with id ${note.id} was added to list`);
-        res
+        return res
           .status(201)
           .location(`/api/notes/${note.id}`)
           .json(serializeNote(note));

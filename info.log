@@ -2749,3 +2749,211 @@
 {"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
 {"message":"Folder with id 123 not found","level":"error"}
 {"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 224 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 225 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 226 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 227 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 228 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 229 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 230 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 231 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 232 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 233 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 234 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 235 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 236 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 237 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 238 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 239 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 240 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 241 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 242 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 243 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 244 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"folder is required","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 245 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 246 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 247 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 248 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 249 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 250 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 251 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 252 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 253 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 254 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}

@@ -65,34 +65,31 @@ describe(`Notes endpoints`, () => {
     });
   });
 
-  describe(`POST /api/notes/`, done => {
+  describe(`POST /api/notes/`, () => {
     it(`adds a new note to the database`, () => {
       const newNote = {
-        note_name: "TEST NOTE",
-        content: "This is content for test note",
-        folder: 1
+        note_name: "PATCHED NOTE",
+        content: "NEW PATCHED NOTE CONTENT",
+        folder: 3
       };
       return supertest(app)
         .post(`/api/notes`)
         .send(newNote)
         .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
-        .expect(response => {
-          console.log(response);
+        .expect(201)
+        .expect(res => {
+          expect(res.body.note_name).to.eql(newNote.note_name);
+          expect(res.body.content).to.eql(newNote.content);
+          expect(res.body.folder).to.eql(newNote.folder);
+          expect(res.body).to.have.property("id");
+          expect(res.headers.location).to.eql(`/api/notes/${res.body.id}`);
         })
-        .expect(500, done);
-      // .expect(res => {
-      //   expect(res.body.note_name).to.eql(newNote.note_name);
-      //   expect(res.body.content).to.eql(newNote.content);
-      //   expect(res.body.folder).to.eql(newNote.folder);
-      //   expect(res.body).to.have.property("id");
-      //   expect(res.headers.location).to.eql(`/api/notes/${res.body.id}`);
-      // })
-      // .then(res =>
-      //   supertest(app)
-      //     .get(`/api/notes/${res.body.id}`)
-      //     .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
-      //     .expect(res.body)
-      // );
+        .then(res =>
+          supertest(app)
+            .get(`/api/notes/${res.body.id}`)
+            .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+            .expect(res.body)
+        );
     });
   });
 
@@ -103,7 +100,32 @@ describe(`Notes endpoints`, () => {
           .delete(`/api/notes/123`)
           .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
           .expect(404, {
-            error: { message: `Folder not found` }
+            error: { message: `Note doesn't exist` }
+          });
+      });
+    });
+
+    context(`Given there is a note of that id`, () => {
+      const testFolders = fixtures.makeFoldersArray();
+      const testNotes = fixtures.makeNotesArray();
+      beforeEach("insert folders", () => {
+        return db.into("folders").insert(testFolders);
+      });
+      beforeEach("insert notes", () => {
+        return db.into("notes").insert(testNotes);
+      });
+      it(`removes the note by ID from the store`, () => {
+        const idToRemove = 2;
+        const expectedNotes = testNotes.filter(note => note.id !== idToRemove);
+        return supertest(app)
+          .delete(`/api/notes/${idToRemove}`)
+          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+          .expect(204)
+          .then(() => {
+            supertest(app)
+              .get(`/api/notes`)
+              .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+              .expect(expectedNotes);
           });
       });
     });
