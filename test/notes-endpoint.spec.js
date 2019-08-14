@@ -47,7 +47,7 @@ describe(`Folders endpoints`, () => {
       });
     });
 
-    context(`Given there are notes inthe database`, () => {
+    context(`Given there are notes in the database`, () => {
       const testFolders = fixtures.makeFoldersArray();
       const testNotes = fixtures.makeNotesArray();
       beforeEach("insert folders", () => {
@@ -62,6 +62,37 @@ describe(`Folders endpoints`, () => {
           .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
           .expect(200, testNotes);
       });
+    });
+  });
+
+  describe(`POST /api/notes/`, done => {
+    it(`adds a new note to the database`, () => {
+      const newNote = {
+        note_name: "TEST NOTE",
+        content: "This is content for test note",
+        folder: 1
+      };
+      return supertest(app)
+        .post(`/api/notes`)
+        .send(newNote)
+        .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+        .expect(response => {
+          console.log(response);
+        })
+        .expect(500, done);
+      // .expect(res => {
+      //   expect(res.body.note_name).to.eql(newNote.note_name);
+      //   expect(res.body.content).to.eql(newNote.content);
+      //   expect(res.body.folder).to.eql(newNote.folder);
+      //   expect(res.body).to.have.property("id");
+      //   expect(res.headers.location).to.eql(`/api/notes/${res.body.id}`);
+      // })
+      // .then(res =>
+      //   supertest(app)
+      //     .get(`/api/notes/${res.body.id}`)
+      //     .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
+      //     .expect(res.body)
+      // );
     });
   });
 });

@@ -12,7 +12,7 @@ const serializeNote = note => ({
   note_name: xss(note.note_name),
   modified_date: note.modified_date,
   content: xss(note.content),
-  folder: Number(note.folder)
+  folder: parseInt(note.folder)
 });
 
 notesRouter
