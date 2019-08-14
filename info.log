@@ -2957,3 +2957,62 @@
 {"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
 {"message":"Note with id 2 delete","level":"info"}
 {"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 255 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"note_name is required","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"update \"notes\" set \"note_name\" = $1, \"content\" = $2 where \"id\" = $3 - column \"note_name\" of relation \"notes\" does not exist","level":"error"}
+{"message":"Folder with id 4 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"note_name is required","level":"error"}
+{"message":"Folder with id 5 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"note_name is required","level":"error"}
+{"message":"Folder with id 6 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - insert or update on table \"notes\" violates foreign key constraint \"notes_folder_fkey\"","level":"error"}
+{"message":"Folder with id 7 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - insert or update on table \"notes\" violates foreign key constraint \"notes_folder_fkey\"","level":"error"}
+{"message":"Folder with id 8 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - insert or update on table \"notes\" violates foreign key constraint \"notes_folder_fkey\"","level":"error"}
+{"message":"Folder with id 4 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - insert or update on table \"notes\" violates foreign key constraint \"notes_folder_fkey\"","level":"error"}
+{"message":"Folder with id 5 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"note_name is required","level":"error"}
+{"message":"Folder with id 6 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - insert or update on table \"notes\" violates foreign key constraint \"notes_folder_fkey\"","level":"error"}
+{"message":"Folder with id 7 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - insert or update on table \"notes\" violates foreign key constraint \"notes_folder_fkey\"","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"Folder with id 8 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - insert or update on table \"notes\" violates foreign key constraint \"notes_folder_fkey\"","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}

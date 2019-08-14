@@ -19,7 +19,7 @@ describe(`Notes endpoints`, () => {
     db.schema.raw("TRUNCATE TABLE notes, folders CASCADE")
   );
 
-  afterEach(`clean up`, () =>
+  afterEach(`clean up notes`, () =>
     db.schema.raw("TRUNCATE TABLE notes, folders CASCADE")
   );
 
@@ -70,7 +70,8 @@ describe(`Notes endpoints`, () => {
       const newNote = {
         note_name: "PATCHED NOTE",
         content: "NEW PATCHED NOTE CONTENT",
-        folder: 3
+        folder: 3,
+        modified_date: new Date()
       };
       return supertest(app)
         .post(`/api/notes`)
@@ -158,7 +159,8 @@ describe(`Notes endpoints`, () => {
         const updateNote = {
           note_name: "updated note name",
           content: "changed content via patch request",
-          folder: 3
+          folder: 3,
+          modified_date: new Date()
         };
         const expectedNote = {
           ...testNotes[idToUpdate - 1],

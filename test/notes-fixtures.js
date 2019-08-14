@@ -19,35 +19,35 @@ function makeNotesArray() {
   return [
     {
       id: 1,
-      notes_name: "Dogs",
+      note_name: "Dogs",
       modified_date: "2019-08-10T23:47:03.708Z",
       content: "This is content for dog",
       folder: 3
     },
     {
       id: 2,
-      notes_name: "Cats",
+      note_name: "Cats",
       modified_date: "2019-08-10T23:47:03.708Z",
       content: "This is content for cat",
       folder: 2
     },
     {
       id: 3,
-      notes_name: "Frogs",
+      note_name: "Frogs",
       modified_date: "2019-08-10T23:47:03.708Z",
       content: "This is content for frogs",
       folder: 3
     },
     {
       id: 4,
-      notes_name: "Bear",
+      note_name: "Bear",
       modified_date: "2019-08-11T23:47:03.708Z",
       content: "This is content for bear",
       folder: 1
     },
     {
       id: 5,
-      notes_name: "Turtle",
+      note_name: "Turtle",
       modified_date: "2019-08-10T23:47:03.708Z",
       content: "This is content for turtle",
       folder: 1
