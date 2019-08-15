@@ -3016,3 +3016,23 @@
 {"message":"Folder with id 1 deleted.","level":"info"}
 {"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - insert or update on table \"notes\" violates foreign key constraint \"notes_folder_fkey\"","level":"error"}
 {"message":"Note with id 2 delete","level":"info"}
+{"message":"Folder with id 9 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - insert or update on table \"notes\" violates foreign key constraint \"notes_folder_fkey\"","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"Note with id 11 was added to list","level":"info"}
+{"message":"Folder with id 10 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"note_name\") values ($1, $2, $3) returning * - insert or update on table \"notes\" violates foreign key constraint \"notes_folder_fkey\"","level":"error"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"Folder with id 11 was added to list","level":"info"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 123 not found","level":"error"}
+{"message":"Folder with id 1 deleted.","level":"info"}
+{"message":"Note with id 16 was added to list","level":"info"}
+{"message":"Note with id 2 delete","level":"info"}
+{"message":"Note with id 4 delete","level":"info"}

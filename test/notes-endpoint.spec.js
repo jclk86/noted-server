@@ -66,6 +66,14 @@ describe(`Notes endpoints`, () => {
   });
 
   describe(`POST /api/notes/`, () => {
+    const testFolders = fixtures.makeFoldersArray();
+    const testNotes = fixtures.makeNotesArray();
+    beforeEach("insert folders", () => {
+      return db.into("folders").insert(testFolders);
+    });
+    beforeEach("insert notes", () => {
+      return db.into("notes").insert(testNotes);
+    });
     it(`adds a new note to the database`, () => {
       const newNote = {
         note_name: "PATCHED NOTE",
@@ -159,7 +167,7 @@ describe(`Notes endpoints`, () => {
         const updateNote = {
           note_name: "updated note name",
           content: "changed content via patch request",
-          folder: 3,
+          folder: 2,
           modified_date: new Date()
         };
         const expectedNote = {
