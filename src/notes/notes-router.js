@@ -1,6 +1,5 @@
 const express = require("express");
 const xss = require("xss");
-const { isWebUri } = require("valid-Url");
 const logger = require("../logger");
 const NotesService = require("./notes-service");
 
